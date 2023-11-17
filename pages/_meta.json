@@ -1,6 +1,7 @@
 {
   "index": "Introduction",
-  "another": "Another Page",
+  "quick-start": "Quick Start",
+  "interactive-demo": "Interactive Demo",
   "advanced": "Advanced (A Folder)",
   "about": {
     "title": "About",

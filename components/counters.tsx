@@ -15,6 +15,7 @@ function MyButton() {
       <button onClick={handleClick} className={styles.counter}>
         Clicked {count} times
       </button>
+      Test
     </div>
   )
 }
