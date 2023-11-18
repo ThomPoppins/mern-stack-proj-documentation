@@ -10,6 +10,7 @@ const MongoDBTryFreeButton = styled.button`
   text-decoration: none;
   display: inline-block;
   font-size: 18px;
+  font-weight: 600;
   margin: 4px 2px;
   margin-top: 20px;
   cursor: pointer;
