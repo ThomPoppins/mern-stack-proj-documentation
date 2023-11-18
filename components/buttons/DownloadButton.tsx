@@ -1,6 +1,6 @@
 // MongoDBTryFreeButton.js
-import React, { ButtonHTMLAttributes } from 'react';
-import styled from 'styled-components';
+import React, { ButtonHTMLAttributes } from 'react'
+import styled from 'styled-components'
 
 interface DownloadButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   // Add any custom props here. For example:
@@ -8,7 +8,7 @@ interface DownloadButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const DownloadButton = styled.button`
-  background-color: #3498db;
+  background-color: #2f81f7;
   color: white;
   border: none;
   padding: 10px 24px;
@@ -30,8 +30,8 @@ const DownloadButton = styled.button`
 
   &:hover {
     border-radius: 40px;
+    background-color: #8abfff;
   }
-`;
+`
 
-export default DownloadButton;
-
+export default DownloadButton

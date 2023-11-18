@@ -1,8 +1,8 @@
 // MongoDBTryFreeButton.js
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const GetGitButton = styled.button`
-  background-color: #f14e32;
+  background-color: #a82c1f;
   color: white;
   border: none;
   padding: 10px 24px;
@@ -23,8 +23,9 @@ const GetGitButton = styled.button`
   transition-delay: 0s;
 
   &:hover {
+    background-color: #f14e32;
     border-radius: 40px;
   }
-`;
+`
 
-export default GetGitButton;
+export default GetGitButton
