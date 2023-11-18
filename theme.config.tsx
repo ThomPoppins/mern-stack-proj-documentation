@@ -17,9 +17,9 @@ const theme = {
   head: function Head(props) {
     return (
       <>
-        <meta charset="utf-8" />
-        <meta name="theme-color" content="#000" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {/* <meta charset="utf-8" /> */}
+        {/* <meta name="theme-color" content="#000" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> */}
         <link rel="apple-touch-icon" sizes="180x180" href="/javascript.svg" />
         <link
           rel="icon"
@@ -35,7 +35,7 @@ const theme = {
         />
         <link rel="mask-icon" href="/javascript.svg" color="#000000" />
         <link rel="shortcut icon" href="/javascript.svg" />
-        <meta name="msapplication-TileColor" content="#000000" />
+        {/* <meta name="msapplication-TileColor" content="#000000" />
         <meta
           name="description"
           content="Website created for the FrontendMasters course on JavaScript Patterns by Lydia Hallie"
@@ -67,7 +67,7 @@ const theme = {
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@lydiahallie" />
-        <meta name="twitter:creator" content="@lydiahallie" />
+        <meta name="twitter:creator" content="@lydiahallie" /> */}
       </>
     );
   },
