@@ -5,10 +5,10 @@ import Image from "next/image";
 const theme = {
   logo: () => (
     <>
-      <Image src="/vind-expert.png" alt="me" width="28" height="28" style={{ marginRight: '8px', marginTop: '2px' }} />
+      {/* <Image src="/vind-expert.png" alt="me" width="28" height="28" style={{ marginRight: '8px', marginTop: '2px' }} /> */}
       <div>
       <h1 className="websiteTitleHeader">
-        MERN_STACK_PROJ.<span style={{ opacity: 0.2 }}></span>
+      🚀 MERN_STACK_PROJ.<span style={{ opacity: 0.2 }}></span>
       </h1>
       </div>
 
@@ -20,8 +20,8 @@ const theme = {
         {/* <meta charset="utf-8" /> */}
         {/* <meta name="theme-color" content="#000" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" /> */}
-        <link rel="apple-touch-icon" sizes="180x180" href="/javascript.svg" />
-        <link
+        {/* <link rel="apple-touch-icon" sizes="180x180" href="/javascript.svg" /> */}
+        {/* <link
           rel="icon"
           type="image/png"
           sizes="32x32"
@@ -32,9 +32,9 @@ const theme = {
           type="image/png"
           sizes="16x16"
           href="/javascript.svg"
-        />
-        <link rel="mask-icon" href="/javascript.svg" color="#000000" />
-        <link rel="shortcut icon" href="/javascript.svg" />
+        /> */}
+        {/* <link rel="mask-icon" href="/javascript.svg" color="#000000" />
+        <link rel="shortcut icon" href="/javascript.svg" /> */}
         {/* <meta name="msapplication-TileColor" content="#000000" />
         <meta
           name="description"
