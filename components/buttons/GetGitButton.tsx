@@ -1,8 +1,8 @@
 // MongoDBTryFreeButton.js
 import styled from 'styled-components';
 
-const MongoDBTryFreeButton = styled.button`
-  background-color: #2ecc71;
+const GetGitButton = styled.button`
+  background-color: #f14e32;
   color: white;
   border: none;
   padding: 10px 24px;
@@ -27,4 +27,4 @@ const MongoDBTryFreeButton = styled.button`
   }
 `;
 
-export default MongoDBTryFreeButton;
+export default GetGitButton;
