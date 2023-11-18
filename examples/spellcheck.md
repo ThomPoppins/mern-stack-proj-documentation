@@ -1,0 +1,1 @@
+This subsection will explain everything about the functionalities available to all users.

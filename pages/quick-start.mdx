@@ -1,85 +1,107 @@
-## Quick Start
+# Quick Start Guide
 
-You can find the instructions of setting up the application locally below. If you want to skip this step feel free to go next to the [Interactive Demo](/interactive-demo) section.
+Follow these simple steps to set up the application locally. If you prefer, you can skip this and proceed directly to the [Interactive Demo](/interactive-demo) section.
 
-## Set up environment:
+## Setting Up Your Environment
 
-0. **Create a free MongoDB database to connect with and obtain a MongoDB authentication URL for Node.js.**
+### Prerequisites:
 
-1. **Clone the Repository**:
+#### Git
 
-   ```bash copy
-   git clone git@github.com:ThomPoppins/MERN_STACK_PROJ..git MERN_STACK_PROJ && cd MERN_STACK_PROJ
+Git, a version control system, lets you track changes to files and coordinate work among multiple contributors.
+
+If you choose not to install git, no worries—you can still set up the application locally.
+
+##### Download:
+
+Get Git (includes Git Bash) [here](https://git-scm.com/downloads).
+
+#### Terminal
+
+For this application, you need a terminal to start the servers.
+
+- On Windows, use Git Bash or Powershell.
+- On Mac or Linux, Git Bash works as well.
+
+#### MongoDB
+
+MongoDB, a NoSQL database, allows you to store data in JSON-like documents—a great choice for Node.js applications.
+
+##### Free Database
+
+Visit the [MongoDB website](https://www.mongodb.com/), click 'Start Free', and follow the instructions to create a free database.
+
+#### Node.js + NPM:
+
+Node.js is a JavaScript runtime, and NPM is a package manager for Node.js, automatically installed with Node.js.
+
+Download the latest version (or LTS version) of Node.js [here](https://nodejs.org/en/download/).
+
+##### Download
+
+Get the latest (LTS) version of Node.js [here](https://nodejs.org/en/download/).
+
+### Clone Repository
+
+```bash copy
+git clone git@github.com:ThomPoppins/MERN_STACK_PROJ.git MERN_STACK_PROJ && cd MERN_STACK_PROJ
+```
+
+### Backend Configuration
+
+1. Navigate to the `/backend` folder in your file explorer.
+2. Create a `config.js` file.
+3. Add the following constants and update them with your personal values:
+
+   ```javascript filename="Configuration: /backend/config.js" {3} copy
+   export const PORT = 5555;
+   export const mongoDBURL = "your-mongodb-connection-url";
+   export const JWT_SECRET = "your-secret-key";
+   export const KVK_TEST_API_KEY = "your-test-api-key";
+   export const KVK_PROD_API_KEY = "your-prod-api-key";
    ```
 
-2. **Set Up Backend Configuration**:
+### Set Up Frontend Configuration
 
-   - Navigate to the `/backend` folder in your file explorer.
-   - Create a `config.js` file.
-   - Add the following constants and update them to your personal values:
+1. Navigate to the `/frontend` folder.
+2. Create a `config.js` file if it doesn't exist.
+3. Add the following constant and export it:
 
-     ```javascript filename="Configuration: /backend/config.js" {3} copy
-     // port for the server to listen on
-     export const PORT = 5555;
+   ```javascript filename="Configuration: /frontend/config.js" {3} copy
+   export const BACKEND_URL = "http://localhost:5555";
+   export const TEST_KVK_API = false;
+   ```
 
-     // YOUR MongoDB database connection URL (if you want to test this application without 
-     // creating your own database, contact me at thompoppins@gmail.com, I'll provide you with a database URL)
-     export const mongoDBURL =
-       "mongodb+srv://exampleuser:examplepasswork@example-mern-stack-project.xhvmidl.mongodb.net/?retryWrites=true&w=majority";
+### Install Dependencies
 
-     // Secret key for JWT signing and encryption (just generate a random string or keep it like it is for testing purposes)
-     export const JWT_SECRET = "yoursecretkey";
+- Inside the `/backend` folder, run:
 
-     // TEST API key for KVK API (also required)
-     export const KVK_TEST_API_KEY = "l7xx1f2691f2520d487b902f4e0b57a0b197";
+  ```bash copy
+  npm install
+  ```
 
-     // PROD API key for KVK API (also required)
-     export const KVK_PROD_API_KEY = "";
-     ```
+- Inside the `/frontend` folder, run:
 
-3. **Set Up Frontend Configuration**:
+  ```bash copy
+  npm install
+  ```
 
-   - Navigate to the `/frontend` folder.
-   - Create a `config.js` file if it doesn't exist.
-   - Add the following constant and export it:
+### Start Servers
 
-     ```javascript filename="Configuration: /frontend/config.js" {3} copy
-     export const BACKEND_URL = "http://localhost:5555";
-     // Disable company validation by KVK API (If you want to test the KVK company validation, mail me at thompoppins@gmail.com for 
-     // instructions how to set this up.)
-     export const TEST_KVK_API = false;
-     ```
+- Inside the `/backend` folder, run:
 
-4. **Install Dependencies**:
+  ```bash copy
+  npm run dev
+  ```
 
-   - Inside the `/backend` folder, run:
+- In a separate terminal, inside the `/frontend` folder, run:
 
-     ```bash copy
-     npm install
-     ```
+  ```bash copy
+  npm run dev
+  ```
 
-   - Inside the `/frontend` folder, run:
+### Access the Application
 
-     ```bash copy
-     npm install
-     ```
-
-5. **Start the Servers**:
-
-   - Inside the `/backend` folder, run:
-
-     ```bash copy
-     npm run dev
-     ```
-
-   - In a separate terminal, inside the `/frontend` folder, run:
-
-     ```bash copy
-     npm run dev
-     ```
-
-6. **Access the Application**:
-   - Visit the web application in your browser using the link printed by the Vite.js server after starting the frontend server.
+Visit the web application in your browser using the link provided by the Vite.js server after starting the frontend server.
 
 Now you have the application up and running locally!
-
