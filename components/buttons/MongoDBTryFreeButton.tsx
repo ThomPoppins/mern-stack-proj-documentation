@@ -3,26 +3,27 @@ import styled from 'styled-components';
 
 const MongoDBTryFreeButton = styled.button`
   background-color: #00ED64;
-  color: white;
+  color: #001E2B;
   border: none;
   padding: 15px 32px;
   text-align: center;
-  font-weight: bold;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 18px;
   margin: 4px 2px;
   margin-top: 20px;
   cursor: pointer;
-  border-radius: 4px;
+  border: 4px solid black;
+  box-sizing: border-box;
+  border-radius: 5px;
+  transition-property: border-radius;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+
   &:hover {
-    transition-property: border-radius;
-    transition-duration: 0.15s;
-    transition-timing-function: ease;
-    transition-delay: 0s;
     border-radius: 40px;
-    background-color: #0e8e44;
   }
 `;
 
-export default MongoDBTryFreeButton;
+export default MongoDBTryFreeButton
