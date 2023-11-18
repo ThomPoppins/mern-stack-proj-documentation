@@ -47,18 +47,17 @@ For this application, you need a terminal to start the servers.
 - On Windows, use Git Bash or Powershell.
 - On Mac or Linux, Git Bash works as well.
 
-#### Node.js + NPM:
+#### Node.js + NPM
 
 Node.js is a JavaScript runtime, and NPM is a package manager for Node.js, automatically installed with Node.js.
 
-##### Download
+##### Download:
 
 import NodeButton from '../components/buttons/NodeButton'
 
 <a href='' target='_blanc'>
   <NodeButton>Get Node.js</NodeButton>
 </a>
-Get Node.js
 
 ### Fetch the Code
 
@@ -70,7 +69,7 @@ You can choose to clone the repository or download the code as a zip file.
 git clone git@github.com:ThomPoppins/MERN_STACK_PROJ.git MERN_STACK_PROJ && cd MERN_STACK_PROJ
 ```
 
-#### Download the Code
+#### Download:
 
 import DownloadButton from '../components/buttons/DownloadButton'
 
@@ -84,7 +83,7 @@ import DownloadButton from '../components/buttons/DownloadButton'
 2. Create a `config.js` file.
 3. Add the following constants and update them with your personal values:
 
-   ```javascript filename="Configuration: /backend/config.js" {3} copy
+   ```javascript filename="/backend/config.js" {3} copy
    export const PORT = 5555
    export const mongoDBURL = 'your-mongodb-connection-url'
    export const JWT_SECRET = 'your-secret-key'
@@ -98,7 +97,7 @@ import DownloadButton from '../components/buttons/DownloadButton'
 2. Create a `config.js` file if it doesn't exist.
 3. Add the following constant and export it:
 
-   ```javascript filename="Configuration: /frontend/config.js" {3} copy
+   ```javascript filename="/frontend/config.js" {3} copy
    export const BACKEND_URL = 'http://localhost:5555'
    export const TEST_KVK_API = false
    ```
