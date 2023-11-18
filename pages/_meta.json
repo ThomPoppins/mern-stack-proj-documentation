@@ -1,5 +1,5 @@
 {
-  "index": "Introduction",
+  "index": {"title": "Introduction" },
   "quick-start": "Quick Start",
   "interactive-demo": "Interactive Demo",
   "advanced": "Advanced (A Folder)",
