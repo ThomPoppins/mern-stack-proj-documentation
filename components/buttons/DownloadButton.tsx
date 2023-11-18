@@ -1,8 +1,8 @@
 // MongoDBTryFreeButton.js
 import styled from 'styled-components';
 
-const MongoDBTryFreeButton = styled.button`
-  background-color: #2ecc71;
+const DownloadButton = styled.button`
+  background-color: #3498db;
   color: white;
   border: none;
   padding: 10px 24px;
@@ -27,4 +27,4 @@ const MongoDBTryFreeButton = styled.button`
   }
 `;
 
-export default MongoDBTryFreeButton;
+export default DownloadButton;

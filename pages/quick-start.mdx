@@ -14,7 +14,11 @@ If you choose not to install git, no worries—you can still set up the applicat
 
 ##### Download:
 
-Get Git (includes Git Bash) [here](https://git-scm.com/downloads).
+import GetGitButton from '../components/buttons/GetGitButton';
+
+<a href="https://git-scm.com/downloads" target="_blank">
+  <GetGitButton>Get Git</GetGitButton>
+</a>
 
 #### Terminal
 
@@ -27,7 +31,7 @@ For this application, you need a terminal to start the servers.
 
 MongoDB, a NoSQL database, allows you to store data in JSON-like documents, a great choice for Node.js applications.
 
-Click on this button to go to their website and click 'Start Free' to create an account and a free database.
+##### Register a MongoDB account and get a free database:
 
 import MongoDBTryFreeButton from '../components/buttons/MongoDBTryFreeButton';
 
@@ -53,13 +57,17 @@ You can choose to clone the repository or download the code as a zip file.
 
 #### Clone the Repository
 
-```bash copy
+```bash filename="Bash" copy
 git clone git@github.com:ThomPoppins/MERN_STACK_PROJ.git MERN_STACK_PROJ && cd MERN_STACK_PROJ
 ```
 
 #### Download the Code
 
+import DownloadButton from '../components/buttons/DownloadButton';
 
+<a href="https://github.com/ThomPoppins/MERN_STACK_PROJ./archive/refs/heads/main.zip">
+  <DownloadButton>Download Code</DownloadButton>
+</a>
 
 ### Backend Configuration
 
@@ -75,7 +83,7 @@ git clone git@github.com:ThomPoppins/MERN_STACK_PROJ.git MERN_STACK_PROJ && cd M
    export const KVK_PROD_API_KEY = "your-prod-api-key";
    ```
 
-### Set Up Frontend Configuration
+### Frontend Configuration
 
 1. Navigate to the `/frontend` folder.
 2. Create a `config.js` file if it doesn't exist.
@@ -118,4 +126,4 @@ git clone git@github.com:ThomPoppins/MERN_STACK_PROJ.git MERN_STACK_PROJ && cd M
 
 Visit the web application in your browser using the link provided by the Vite.js server after starting the frontend server.
 
-Now you have the application up and running locally!
+**Now you have the application up and running locally!**
