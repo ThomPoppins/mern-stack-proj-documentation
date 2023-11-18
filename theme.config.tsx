@@ -1,17 +1,21 @@
-import React from "react";
-import { useRouter } from "next/router";
-import Image from "next/image";
+import React from 'react'
+import { useRouter } from 'next/router'
+import Image from 'next/image'
 
 const theme = {
+  primaryHue: { dark: 262, light: 113 },
+  primarySaturation: 100,
   logo: () => (
     <>
       {/* <Image src="/vind-expert.png" alt="me" width="28" height="28" style={{ marginRight: '8px', marginTop: '2px' }} /> */}
       <div>
-      <h1 className="websiteTitleHeader">
-      🚀 MERN_STACK_PROJ.<span style={{ opacity: 0.2 }}></span>
-      </h1>
+        <div>
+          <h1 className='websiteTitleHeader'>
+            🚀MERN_STACK_PROJ.<span style={{ opacity: 0.2 }}></span>
+          </h1>
+        </div>
+        <div style={{ float: 'right' }}>by Thom Veldpaus</div>
       </div>
-
     </>
   ),
   head: function Head(props) {
@@ -69,19 +73,19 @@ const theme = {
         <meta name="twitter:site" content="@lydiahallie" />
         <meta name="twitter:creator" content="@lydiahallie" /> */}
       </>
-    );
+    )
   },
   darkMode: true,
   nextThemes: {
-    defaultTheme: "dark",
+    defaultTheme: 'dark',
   },
-  useNextSeoProps: function NextSeoProps () {
+  useNextSeoProps: function NextSeoProps() {
     const { asPath } = useRouter()
     if (asPath !== '/') {
       return {
         titleTemplate: 'MERN_STACK_PROJ. | %s',
       }
     }
-  }
-};
-export default theme;
+  },
+}
+export default theme
