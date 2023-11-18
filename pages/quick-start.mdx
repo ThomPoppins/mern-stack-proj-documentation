@@ -1,18 +1,30 @@
-import PrimaryButton from '../components/buttons/PrimaryButton';
+import PrimaryButton from '../components/buttons/PrimaryButton'
 
 # Quick Start Guide
 
-Follow these simple steps to set up the application locally. 
+Follow these simple steps to set up the application locally.
 
 If you do not want to set up and test this project locally, you can skip this and proceed directly to the Interactive Demo section.
 
-<a href="/interactive-demo">
+<a href='/interactive-demo'>
   <PrimaryButton>Interactive Demo</PrimaryButton>
 </a>
 
 ## Setting Up Your Environment
 
 ### Prerequisites:
+
+#### MongoDB
+
+MongoDB, a NoSQL database, allows you to store data in JSON-like documents, a great choice for Node.js applications.
+
+##### Register a MongoDB account and get a free database:
+
+import MongoDBTryFreeButton from '../components/buttons/MongoDBTryFreeButton'
+
+<a href='https://www.mongodb.com/' target='_blank'>
+  <MongoDBTryFreeButton>Get Free Database</MongoDBTryFreeButton>
+</a>
 
 #### Git
 
@@ -22,9 +34,9 @@ If you choose not to install git, no worries—you can still set up the applicat
 
 ##### Download:
 
-import GetGitButton from '../components/buttons/GetGitButton';
+import GetGitButton from '../components/buttons/GetGitButton'
 
-<a href="https://git-scm.com/downloads" target="_blank">
+<a href='https://git-scm.com/downloads' target='_blank'>
   <GetGitButton>Get Git</GetGitButton>
 </a>
 
@@ -35,29 +47,17 @@ For this application, you need a terminal to start the servers.
 - On Windows, use Git Bash or Powershell.
 - On Mac or Linux, Git Bash works as well.
 
-#### MongoDB
-
-MongoDB, a NoSQL database, allows you to store data in JSON-like documents, a great choice for Node.js applications.
-
-##### Register a MongoDB account and get a free database:
-
-import MongoDBTryFreeButton from '../components/buttons/MongoDBTryFreeButton';
-
-<a href="https://www.mongodb.com/" target="_blank">
-  <MongoDBTryFreeButton>
-    Get Free Database
-  </MongoDBTryFreeButton>
-</a>
-
-#### Node.js + NPM:
+#### Node.js + NPM
 
 Node.js is a JavaScript runtime, and NPM is a package manager for Node.js, automatically installed with Node.js.
 
-Download the latest version (or LTS version) of Node.js [here](https://nodejs.org/en/download/).
+##### Download:
 
-##### Download
+import NodeButton from '../components/buttons/NodeButton'
 
-Get the latest (LTS) version of Node.js [here](https://nodejs.org/en/download/).
+<a href='' target='_blanc'>
+  <NodeButton>Get Node.js</NodeButton>
+</a>
 
 ### Fetch the Code
 
@@ -69,11 +69,11 @@ You can choose to clone the repository or download the code as a zip file.
 git clone git@github.com:ThomPoppins/MERN_STACK_PROJ.git MERN_STACK_PROJ && cd MERN_STACK_PROJ
 ```
 
-#### Download the Code
+#### Download:
 
-import DownloadButton from '../components/buttons/DownloadButton';
+import DownloadButton from '../components/buttons/DownloadButton'
 
-<a href="https://github.com/ThomPoppins/MERN_STACK_PROJ./archive/refs/heads/main.zip">
+<a href='https://github.com/ThomPoppins/MERN_STACK_PROJ./archive/refs/heads/main.zip'>
   <DownloadButton>Download Code</DownloadButton>
 </a>
 
@@ -83,12 +83,12 @@ import DownloadButton from '../components/buttons/DownloadButton';
 2. Create a `config.js` file.
 3. Add the following constants and update them with your personal values:
 
-   ```javascript filename="Configuration: /backend/config.js" {3} copy
-   export const PORT = 5555;
-   export const mongoDBURL = "your-mongodb-connection-url";
-   export const JWT_SECRET = "your-secret-key";
-   export const KVK_TEST_API_KEY = "your-test-api-key";
-   export const KVK_PROD_API_KEY = "your-prod-api-key";
+   ```javascript filename="/backend/config.js" {3} copy
+   export const PORT = 5555
+   export const mongoDBURL = 'your-mongodb-connection-url'
+   export const JWT_SECRET = 'your-secret-key'
+   export const KVK_TEST_API_KEY = 'your-test-api-key'
+   export const KVK_PROD_API_KEY = 'your-prod-api-key'
    ```
 
 ### Frontend Configuration
@@ -97,9 +97,9 @@ import DownloadButton from '../components/buttons/DownloadButton';
 2. Create a `config.js` file if it doesn't exist.
 3. Add the following constant and export it:
 
-   ```javascript filename="Configuration: /frontend/config.js" {3} copy
-   export const BACKEND_URL = "http://localhost:5555";
-   export const TEST_KVK_API = false;
+   ```javascript filename="/frontend/config.js" {3} copy
+   export const BACKEND_URL = 'http://localhost:5555'
+   export const TEST_KVK_API = false
    ```
 
 ### Install Dependencies

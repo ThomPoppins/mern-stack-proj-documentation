@@ -1,8 +1,8 @@
 // MongoDBTryFreeButton.js
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const MongoDBTryFreeButton = styled.button`
-  background-color: #2ecc71;
+  background-color: #239c58;
   color: white;
   border: none;
   padding: 10px 24px;
@@ -24,7 +24,8 @@ const MongoDBTryFreeButton = styled.button`
 
   &:hover {
     border-radius: 40px;
+    background-color: #2ecc71;
   }
-`;
+`
 
-export default MongoDBTryFreeButton;
+export default MongoDBTryFreeButton
