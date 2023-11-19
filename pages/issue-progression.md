@@ -1,0 +1,216 @@
+# Jira Issues
+
+- [ ] [MERNSTACK-57] Create Owner model. Owner schema should set up a one-to-one relationship with the User schema by using a `userId` field in the Owner schema that references the `_id` field of the User schema. This will allow to associate each Owner document with a single User document.
+- [ ] [MERNSTACK-62] Create `junction` table between `Company` and `Project`. This table will be used because of the many-to-many relationship and additional properties that are needed to link a company to a project. (see backend devdocs folder)
+- [ ] [MERNSTACK-63] Create `junction` table between `User` and `Company`. (also a many-to-many relationship, user would be customer of companies and companies would have move then one customers) CONSIDER: Saving users as customers to `company` model instead of creating a `junction` table. This will allow to associate each Company document with multiple User documents. No need for a `junction` table that will make it more complex without any use for it.
+- [x] [MERNSTACK-142] Update README.md with explanation about the validators I created in the frontend application. Explain the regex of every validator used to validate and the test method that returns true or false.
+- [x] [MERNSTACK-14] Create a new schema and model for user.
+- [x] [MERNSTACK-16] Owners will be linked to a company, based on an ownerId in the owner model. CANCELLED: Now the owner will be linked to a company, based on an userId corresponding to the user `_id` in the user model.
+- [x] [MERNSTACK-17] "owners" array should contain owner objects with an userId.
+- [x] [MERNSTACK-51] Create Jira tickets for all TODOs.
+- [x] [MERNSTACK-53] Create GET, POST, PUT and DELETE Company server routes.
+- [x] [MERNSTACK-55] Create User model.
+- [x] [MERNSTACK-56] Create login and register functionality. Hash user password on register and compare hashed password on login. (see backend devdocs folder)
+- [x] [MERNSTACK-58] When user is logged in, create a form to register a company and make user owner. Owner has admin rights at first when creating his account and registering his company.
+- [x] [MERNSTACK-59] Create one-to-many relationship between Owner and Company in the Owner schema. This will allow to associate each Owner document with multiple Company documents. UPDATE: This is not needed because the Company schema will have an `owners` field that will be an array of owner objects with `userId` field.
+- [x] [MERNSTACK-60] Create `user` authentication and authorization functionality using JSON Web Token authorization. (see backend devdocs folder)
+- [x] [MERNSTACK-61] Create `junction` table for many-to-many relationship between `owners` and `companies`. (see backend devdocs folder) CANCELLED: For now it is easier to just add an `owner` field to the `Company` schema and model. This will allow to associate each Company document with company owners. No need for a `junction` table that will make it more complex without any use for it.
+- [x] [MERNSTACK-64] In the frontend, create a route to `/my-companies` where `user` companies will be listed. UPDATE: Route will be /companies for now.
+- [x] [MERNSTACK-65] Create a route to save a new Company document in the database.
+- [x] [MERNSTACK-66] Create a route to get all Company documents from the database.
+- [x] [MERNSTACK-67] Create a route to get a single Company document from the database.
+- [x] [MERNSTACK-68] Create a route to update a single Company document in the database.
+- [x] [MERNSTACK-69] Create a route to delete a single Company document from the database.
+- [x] [MERNSTACK-70] Set up GET, POST, PUT and DELETE Book server routes.
+- [x] [MERNSTACK-74] Set up `Company` model.
+- [x] [MERNSTACK-95] Test companyRouter POST route `/` for saving a new company with Postman.
+- [x] [MERNSTACK-96] Test companyRouter GET route `/` for getting all companies with Postman.
+- [x] [MERNSTACK-97] Test companyRouter GET route `/:id` for getting a single company with Postman.
+- [x] [MERNSTACK-98] Test companyRouter PUT route `/:id` for updating a single company with Postman.
+- [x] [MERNSTACK-99] Test companyRouter DELETE route `/:id` for deleting a single company with Postman.
+- [x] [MERNSTACK-102] Check for the word `property` when it should be `field` in the documentation of schemas and models. Check for the word `field` when it should be `property` in the documentation when talking about database `document`'s
+- [x] [MERNSTACK-103] Start using testing frameworks Mocha and Chai to write automated tests for the endpoints and ensure that the code is working correctly.
+- [x] [MERNSTACK-109] Populate the company document with the properties from the request body if they exist in companiesRoute.js.
+- [x] [MERNSTACK-110] Check if the company already exists in the database based on kvkNumber in companiesRoute.jsx. Hint: Use the findOne method and consider using `unique: true` in the company schema.
+- [x] [MERNSTACK-111] If the company already exists, send status 409 response and a (error) message to inform the client in companiesRoute.jsx.
+- [x] [MERNSTACK-114] Use time-travel debugging with Redux DevTools.
+- [x] [MERNSTACK-115] Decide the default destination after clicking the BackButton, something like the previous page or the home page.
+- [x] [MERNSTACK-116] Create table on the frontend to display all companies.
+- [x] [MERNSTACK-117] Create ShowCompany component to display a single company's details
+- [x] [MERNSTACK-118] Create EditCompany component to edit a single company's details.
+- [x] [MERNSTACK-119] Create DeleteCompany component to delete a single company.
+- [x] [MERNSTACK-120] Create CreateCompany component to create a new company.
+- [x] [MERNSTACK-121] Implement a button on the ShowCompany component that allows the user to navigate to the corresponding EditCompany page.
+- [x] [MERNSTACK-122] Create CompaniesList page (where all companies for a user will be shown in `table` or `card` view.) and safe this `table`/`card` setting to Redux store state so user will return to listing page with preferred setting.
+- [x] [MERNSTACK-123] Create a CompanyModal component that will show up on the CompaniesList page when the user clicks on the `eye` icon.
+- [x] [MERNSTACK-124] Use useSnackbar() for displaying error or success messages to the user in the Company components.
+- [x] [MERNSTACK-125] Inform myself better about using useEffect() to prevent infinite loop situations when my application get more complex. [Speech about using useEffect effectively](https://www.youtube.com/watch?v=eFGeStq8dZo&list=PLokIxGKSireSB4Gx6r7xWlFs9Q9PueDED&ab_channel=ReactConferencesbyGitNation)
+- [x] [MERNSTACK-126] Use react-redux in frontend to `dispatch` actions to `reducers` and `store` to `get` and `set` `state` and `props` in the frontend and combine at least 2 `reducers`. (see frontend devdocs folder)
+- [x] [MERNSTACK-127] Add state for all companies fields that can be registered in RegisterCompany.jsx
+- [x] [MERNSTACK-128] In RegisterCompany.jsx: Add form inputs of all fields that the owner should fill in to register a company. Copy paste the following outer div with .my-4 class to achieve this
+- [x] [MERNSTACK-129] Add state for all companies fields that can be edited in EditCompany.jsx
+- [x] [MERNSTACK-131] Set state for all companies fields that can be edited in EditCompany.jsx
+- [x] [MERNSTACK-138] Create user register page and functionality, save with bcrypt hashed password in database.
+- [x] [MERNSTACK-139] Create a user login page and functionality, validate user password has with bcrypt and compare hashed password on login.
+- [x] [MERNSTACK-140] Make it possible for a user to register a company and automatically become first company owner.
+- [x] [MERNSTACK-141] Find fitting icons for company `name` `phone number` and `email` for the ListCompanies `card` view and CompaniesModal component. Find them in the react-icons library. DO THIS BEFORE CREATING ANY OTHER LIST COMPONENTS!
+- [x] [MERNSTACK-143] Add explanation about the main advantages of using MongoDB and Mongoose in the README.md file in the Backend section.
+- [x] [MERNSTACK-144] After user login, display link that will `navigate` (?with `useNavigate()`?) user to `my-companies` where companies will be listed and with a company register form. (see frontend devdocs folder)
+- [x] [MERNSTACK-146] Decide if the default values should be set in the model or in the route. Hint: Consider using the `default` property in the company schema. CONCLUSION: Set default values in the model.
+- [x] [MERNSTACK-153] Check if the user already exists in the database in usersRoute.jsx when registering a new user. Hint: Use the findOne method and consider using `unique: true` in the user schema.
+- [x] [MERNSTACK-154] If the user already exists, send status 409 response and a (error) message to inform the client.
+- [x] [MERNSTACK-155] Populate the user document with the properties from the request body if they exist when registering account.
+- [x] [MERNSTACK-157] Give input field of the form a red border if the input is invalid in LoginUser, RegisterUser, RegisterCompany and EditCompany components.
+- [x] [MERNSTACK-158] Display error message under the input field if the input is invalid explaining the right format in LoginUser, RegisterUser, RegisterCompany and EditCompany components.
+- [x] [MERNSTACK-159] Give input field of the form a red border if the input is invalid on all forms
+- [x] [MERNSTACK-160] Display error message under the input field if the input is invalid explaining the right format on all forms
+- [x] [MERNSTACK-161] Fix CORS policy error when registering user
+- [x] [MERNSTACK-162] Save userId as state in Redux store after verification of JWT token, make only /, /login and /register routes accessible for users that are not logged in.
+- [x] [MERNSTACK-165] Create a schema and model for images.
+- [x] [MERNSTACK-166] Validate validity and uniqueness of company KVK number
+- [x] [MERNSTACK-167] Add KVK number to the form in RegisterCompany and EditCompany components.
+- [x] [MERNSTACK-168] Make possible for user (owner) to add other owners to the company by finding other users and adding them to the company
+- [x] [MERNSTACK-169] On all forms, validate user input when losing focus and display error message if input is not valid and the right format and color the input field border red.
+- [x] [MERNSTACK-170] Make API call to backend to find users by query on username, name or email, use useEffect to call this function when query changes
+- [x] [MERNSTACK-171] Display results in a list displaying the username, name and email
+- [x] [MERNSTACK-173] Finish EditCompany component, integrated with search functionality so users can be found by name, username or email and added to company as owner.
+- [x] [MERNSTACK-174] When the user selects a user to add as an owner to the company, update the owners state variable in the `<EditCompany />` component to include the selected user. You can use the setOwners() function to update the owners state variable.
+- [x] [MERNSTACK-175] Solve the problem of the owner being undefined
+- [x] [MERNSTACK-176] Display owners first name and last name on `<ShowCompany />` `<CompanySingleCard />` and `<CompanyModal />`.
+- [x] [MERNSTACK-177] Only find owners that are not already owners of the company in the EditCompany and UserSearch component.
+- [x] [MERNSTACK-178] Send invitation to user to become owner of company.
+- [x] [MERNSTACK-179] Display a "Invitation pending" or "Invited" message in de EditCompany page when user hasn't accepted the invitation to become owner of the company yet.
+- [x] [MERNSTACK-180] Move save new company owner functionality to acceptBecomeCompanyOwnerInvitation() function in some new component.
+- [x] [MERNSTACK-181] Add remove button to remove owner from company in EditCompany component.
+- [x] [MERNSTACK-182] Save new owners of company after pressing save button in EditCompany component. CANCELLED: Now the owner can add owners in a different `form` in the EditCompany component without a save button so it is clear that a owner has been added without submitting the form.
+- [x] [MERNSTACK-183] Remove "Remove" button from EditCompany component of the current logged in user.
+- [x] [MERNSTACK-184] Remove item from search results when added
+- [x] [MERNSTACK-186] Check MongoDB discord server and Twitter for the BUG that users aren't filtered using the $nin operator
+- [x] [MERNSTACK-188] Remove `No` field and add KVK number field in CompaniesTable component
+- [x] [MERNSTACK-189] Add real kvk number validation with API call in kvkNumberValidator
+- [x] [MERNSTACK-190] Make call to backend API to validate kvk number in kvkNumberValidator
+- [x] [MERNSTACK-191] Export working getKvkData function returning the KVK data in kvkController.js
+- [x] [MERNSTACK-193] Fix BUG that you can save a company without kvk number validation in RegisterCompany.jsx and EditCompany.jsx SOLUTION: Throw an error in the kvkNumberValidator if the kvk number is not valid. Catch the error in the RegisterCompany and EditCompany components and display an error message to the user. If the KVK number is not valid, return from handleEditCompany() and handleSaveCompany() functions and don't save the company.
+- [x] [MERNSTACK-195] Define the invite model
+- [x] [MERNSTACK-202] FIX backend error: "PayloadTooLargeError: request entity too large" for images too large ExpressJS. [Multer link](https://www.webslesson.info/2022/05/upload-file-in-node-js-express-using-multer.html) SOLVED using Multer for large image file uploads.
+- [x] [MERNSTACK-203] Make file upload possible as user profile image
+- [x] [MERNSTACK-206] Set up a profile picture upload for the user
+- [x] [MERNSTACK-207] Save the profile picture Base64 string to the database
+- [x] [MERNSTACK-208] Create default page layout that all pages will become children of
+- [x] [MERNSTACK-210] Change text color to white when background image is set
+- [x] [MERNSTACK-211] Add background color with opacity to all places where text is displayed on top of the background image.
+- [x] [MERNSTACK-213] Complete styling on RegisterCompany page.
+- [x] [MERNSTACK-214] Style all form input fields
+- [x] [MERNSTACK-216] Use Multer for large image file upload.
+- [x] [MERNSTACK-217] Create a new routes file for file uploads. When the profile picture is uploaded, save the link/URL with the filepath in the database. ALSO return the path/fileId of the image as response to the client, so when the user registers the correct fileId/filepath will be saved to the new/edited user/company.
+- [x] [MERNSTACK-218] Make /backend server a CDN for static files like images.
+- [x] [MERNSTACK-219] Make first name and last name required on user registration. In the model, route, validator and frontend page form.
+- [x] [MERNSTACK-221] Log in when user has filled in his/her password and pressed enter.
+- [x] [MERNSTACK-222] Use a placeholder image for the profile picture, specifically a man for male users and a woman for female users.
+- [x] [MERNSTACK-223] Spin animation on Find button on homepage when the button is clicked.
+- [x] [MERNSTACK-224] Update "Invite" status when user Accepts or Declines a Invite.
+- [x] [MERNSTACK-225] If there is 1 or more pending invites, notify the user in the Navbar by making the "Invites" item bounce and give it a bright background color.
+- [x] [MERNSTACK-226] When you click somewhere else besides the dropdown menu, the dropdown should close in Navbar.jsx
+- [x] [MERNSTACK-227] Dropdown menu items have to become clickable over the full width of the menu instead only the text and icon
+- [x] [MERNSTACK-230] README.md: Finish tutorial about asynchronous JavaScript: <https://www.youtube.com/watch?v=ZYb_ZU8LNxs&ab_channel=freeCodeCamp.org>
+- [x] [MERNSTACK-232] Add a "data-test-id" attribute to all elements with an onClick and onChange event handler.
+- [x] [MERNSTACK-233] Find a pretty loading spinner animation to replace the ugly `<Spinner />`
+- [x] [MERNSTACK-241] Evaluate all `Company` field descriptions and make them correct.
+- [x] [MERNSTACK-244] Clean up everything `Book` related.
+- [x] [MERNSTACK-246] Add useSnackbar notification after successful profile image upload.
+- [x] [MERNSTACK-248] Get search results if companies match.
+- [x] [MERNSTACK-251] Create a find route in the backend for finding results when using the search input on the homepage
+- [x] [MERNSTACK-253] Remove `hashedPassword` from the user object before sending it to the frontend.
+- [x] [MERNSTACK-256] BUG: Related to MERNSTACK-257. Sometimes it is possible to accept a invite twice an you become owner of the company twice. Saving a new company owner should check that the owner not already is owner.
+- [x] [MERNSTACK-257] BUG: Related to MERNSTACK-256. After becoming owner you can still get an invite for a company you already own, so the "received pending invites" have to check if the receiver isn't already owner and otherwise the invite should cancel.
+- [x] [MERNSTACK-258] BUG: Related to [MERNSTACK-256&257]. When a company owner invites a user for ownership, if they empty the search input and search again, they can send multiple pending invites to 1 user. Limit this to one by filtering out the search results in EditCompany
+- [x] [MERNSTACK-284] Add little profile picture of invited user next to their details in the "pending invites" section.
+- [x] [MERNSTACK-285] Add picture to search results searching for co-owners.
+- [x] [MERNSTACK-286] Add picture to the list of owners in EditCompany
+- [ ] [MERNSTACK-209] Make file upload possible as company logo
+- [ ] [MERNSTACK-212] Create account edit page for account settings/configurations.
+- [ ] [MERNSTACK-220] After registration, log user in automatically and redirect to /account/onboarding page.
+- [ ] [MERNSTACK-228] The "Find" on the homepage has to transition between color using "color transitions" from TailwindCSS.
+- [ ] [MERNSTACK-231] Use useSnackbar to UNDO steps users have taken, to start, let a user un-invite a co-owner after sending a invite and let the user UNDO removing a owner from a company. [See here](https://notistack.com/features/basic#actions)
+- [ ] [MERNSTACK-234] Finish Google Docs doc about making webapp DEMO video of application.
+- [ ] [MERNSTACK-235] Record first DEMO video briefly demonstrating what technology I use and what is the result.
+- [ ] [MERNSTACK-236] Upload DEMO video to YouTube and link to the video's in README.md and Github profile.
+- [ ] [MERNSTACK-237] Add DEMO links to new LinkedIn profile. Explain on LinkedIn profile that I also have another account and that I can't access it anymore.
+- [ ] [MERNSTACK-238] Edit first DEMO video, make sure to add an explanation of the functionalities of the application and what kind of technologies were used. START OF with demonstrating the client side app and LATER technical explanation.
+- [ ] [MERNSTACK-239] Implement ERROR logging to error log files everywhere console.log is used.
+- [ ] [MERNSTACK-240] Remove all debug data printing console.logs and keep useful error logs. Clean up the debug data flow.
+- [ ] [MERNSTACK-242] Fade dropdown menu in and out with quickly with customized animation defined in tailwind.config.js.
+- [ ] [MERNSTACK-243] Implement localization library for multi-language support
+- [ ] [MERNSTACK-250] Add `Industry` to `Company` registration form and edit form.
+- [ ] [MERNSTACK-252] Filter search results from users that already are in a pending invite
+- [ ] [MERNSTACK-254] Add phone number to `User` model routes and registration form.
+- [ ] [MERNSTACK-255] When user clicks logout, there should be a "Go back" or "Stay logged in"  option available on the /logout page.
+- [ ] [MERNSTACK-259] Finish basic structure and design for Result.jsx page. (Search results page)
+- [ ] [MERNSTACK-279] Read article about performance and optimization of MERN stack [here](https://medium.com/@ashfaqe.sa12/building-production-ready-high-performance-web-applications-with-the-mern-stack-how-to-unleash-c429591d5b0f).
+- [ ] [MERNSTACK-280] Read article about [Node.js](https://medium.com/@ashfaqe.sa12/building-production-ready-high-performance-web-applications-with-the-mern-stack-how-to-unleash-5a3c7a6e854b).
+- [ ] [MERNSTACK-281] Read article about [MongoDB](https://medium.com/@ashfaqe.sa12/building-production-ready-high-performance-web-applications-with-the-mern-stack-how-to-unleash-a390d60d08fa).
+- [ ] [MERNSTACK-282] Read article about MERN stack [Security](https://medium.com/@ashfaqe.sa12/building-production-ready-high-performance-web-applications-with-the-mern-stack-how-to-unleash-b8e0ac68d087)
+- [ ] [MERNSTACK-283] Read MERN stack [CI/CD & deployment article](https://medium.com/@ashfaqe.sa12/building-production-ready-high-performance-web-applications-with-the-mern-stack-how-to-unleash-10699767f4b4)
+- [ ] [MERNSTACK-298] Add image crop to application so everybody can crop their image till it fits the frame. [Almost perfect example, predefined aspect ratio](https://codesandbox.io/s/react-image-crop-demo-with-react-hooks-0h4db?file=/src/App.js), [After getting the first example done, this one might be interesting to investigate](https://codesandbox.io/s/react-image-crop-demo-with-react-hooks-q5lbkn?file=/src/App.tsx) [react-image-crop MANY examples page](https://codesandbox.io/examples/package/react-image-crop), [NPM Page react-image-crop](https://www.npmjs.com/package/react-image-crop).
+- [ ] [MERNSTACK-288] Upgrade ShowCompany to a nice profile page where companies can upload multiple images with titles. This is the start of the timeline or storyline that's it going to become.
+- [ ] [MERNSTACK-289] Use React Dropzone for easy image file select or drag and drop when user uploads profile image.
+- [ ] [MERNSTACK-290] First make possible for the user to crop their profile image within a 1 / 1 aspect ratio so I can use this everywhere in the website UI.
+- [ ] [MERNSTACK-291] After cropping the image all left is a Base64 coded binary string, convert that string back to an image file and upload that image file to the backend server. (+ CDN) [Read this info page about how to work with file conversion in JavaScript with clear examples](https://www.codingforentrepreneurs.com/blog/a-few-javascript-methods-for-images-files/).
+- [ ] [MERNSTACK-293] Get started with the `react-testing-library`. [React Testing Library Documentation](https://testing-library.com/docs/react-testing-library/intro/) [Repository README](https://github.com/testing-library/react-testing-library)
+- [ ] [MERNSTACK-294] Read about testing with `jest-dom` testing library has additional value. [Jest-DOM Repository README](https://github.com/testing-library/jest-dom)
+- [ ] [MERNSTACK-295] Let Jest automatically import tests. import '@testing-library/jest-dom' [Configure Jest to import test imports for you automatically. Learn more in the setup docs!](https://testing-library.com/docs/react-testing-library/setup#cleanup) [Source](https://github.com/testing-library/react-testing-library#basic-example)
+- [x] [MERNSTACK-292] Correct the README.md file everywhere I talk about Base64 strings and Blob images. My understanding was wrong and that's why it needs to be corrected to actual information. Base64 is a binary-to-text encoding scheme. Blob stands for Binary Large Object and is used for storing binary data, my understanding was that those two were the same thing, but they are not, Blob is raw binary data and Base64 is a representation of binary data in an ASCII string format.
+- [ ] [MERNSTACK-296] Practice working with breakpoints in VS Code for 30 minutes.
+- [ ] [MERNSTACK-297] Read into Mock Service Worker to optimize testing to declaratively mock API communication in your tests instead of stubbing window.fetch, or relying on third-party adapters. <https://github.com/mswjs/msw>
+- [x] [MERNSTACK-303] Try vite-jest to get started with testing [npm page](https://www.npmjs.com/package/vite-jest) Read on npm page how to use [es-module-lexer](https://www.npmjs.com/package/es-module-lexer) with vite-jest.
+- [x] [MERNSTACK-304] Try to implement [testing inside of the Vite app.](https://zaferayan.medium.com/how-to-setup-jest-and-react-testing-library-in-vite-project-2600f2d04bdd) [THE Guide to set up Jest on Vite 2023](https://zaferayan.medium.com/how-to-setup-jest-and-react-testing-library-in-vite-project-2600f2d04bdd) 
+- [ ] [MERNSTACK-305] Implement [Jest Snapshot](https://jestjs.io/docs/snapshot-testing) After gaining basic skills and knowledge of working and testing with Jest and react-testing-framework. With Jest snapshot testing you can keep track of all unexpected or any intended UI changes because Jest snapshot makes a snapshot of the rendered components in  [pretty-format](https://github.com/jestjs/jest/tree/main/packages/pretty-format) which is a conversion of all JavaScript to most readable format.
+- [ ] [MERNSTACK-306] Read into [pretty-format](https://github.com/jestjs/jest/tree/main/packages/pretty-format) and use it on console.log statements to make them more readable.
+- [ ] [MERNSTACK-307] Read about how to utilize Istanbul code coverage best. [Best basic introduction](https://medium.com/walmartglobaltech/do-you-have-100-code-coverage-10c09a44832b), [https://istanbul.js.org/](https://istanbul.js.org/), [Jesy, Istanbul and React](https://sergio.io/blog/reactjs-unit-test-and-code-coverage-with-jest)
+- [ ] [MERNSTACK-308] Write a Jest/react-testing-library test for the user login form, as good possible. [ARTICLE ABOUT REACT-TEST-LIBRARY LOGIN FORM TESTING](https://for-devs-by-devs.hashnode.dev/login-form-testing-using-react-testing-library)
+- [ ] [MERNSTACK-309] After [MERNSTACK-308], implement [Mock Service Worker](https://github.com/mswjs/msw) functionality in the login form test.
+- [ ] [MERNSTACK-310] Read into [core-js](https://www.jsdelivr.com/package/npm/core-js-bundle), see if that is something useful for me or not.
+- [ ] [MERNSTACK-314] [Read about Vite](https://vitejs.dev/guide/why.html) about Vite has to offer and add to documentation. Get a more general understanding about the advantages of Vite are in comparison to the much more supported create-react-app and make a desicion about a possible migration. [Look through the interesting subsectionds of the Viteconf video](https://www.youtube.com/watch?v=veCxKeLl35A&t=120s&ab_channel=ViteConf)
+- [ ] [MERNSTACK-315] Set up Jest in the /backend.
+- [ ] [MERNSTACK-316] Read into [Vite Storybook](https://storybook.js.org/docs/react/builders/vite) and see if it is useful. Also finish the [ViteConf Storybook video presentation](https://youtu.be/veCxKeLl35A?si=qyVnioYMo9KgphVh&t=8575). Storybook claims to be useful for developers for documentation, development and testing. [Introduction video to Storybook](https://www.youtube.com/watch?v=x-x47qHq3nY&ab_channel=newline)
+- [ ] [MERNSTACK-317] Transform all comments to [JSDoc format](https://jsdoc.app/).
+- [ ] [MERNSTACK-318] Read about the [Storybook ES Lint plugin](https://github.com/storybookjs/eslint-plugin-storybook#readme) and start using it in Storybook.
+- [ ] [MERNSTACK-319] Learn about [Storybook tools from this page](https://storybook.js.org/docs/react/essentials/toolbars-and-globals#global-types-toolbar-annotations) and about how to configure global values.
+- [ ] [MERNSTACK-320] Learn about how to use [MDX](https://storybook.js.org/docs/react/writing-docs/doc-blocks) and [Doc blocks](https://storybook.js.org/docs/react/writing-docs/doc-blocks)
+- [ ] [MERNSTACK-321] [Integrate Figma into Storybook](https://storybook.js.org/docs/react/sharing/design-integrations#figma) and if it does not take too many time, get started with Figma in [the community section](https://www.figma.com/community) and design some component to use Figma in Storybook and after doing that write a piece of documentation for the project README file.
+- [ ] [MERNSTACK-322] [Learn about testing using Storybook.](https://storybook.js.org/docs/react/writing-tests/introduction)
+- [ ] [MERNSTACK-323] Break down search engine functionality of [my MERN_STACK_PROJ. documentation](https://nextra-docs-template.vercel.app/). Read [Nextra documentation](https://nextra.site/) for this.
+- [ ] [MERNSTACK-324] Move all information of this project README file to [the documentation website hosted by Vercel](https://mern-stack-proj.vercel.app/). [Nextra documentation here](https://nextra.site/docs).
+- [ ] [MERNSTACK-325] Add Storybook section to [documentation]((https://mern-stack-proj.vercel.app/).
+- [ ] [MERNSTACK-] Add contact form to [documentation]((https://mern-stack-proj.vercel.app/) that will send a email. [Documentation here.](https://herotofu.com/solutions/guides/react-send-email)
+- [ ] [MERNSTACK-] Add useful [Storybook tutorials](https://storybook.js.org/tutorials/) as Jira issues.
+- [ ] [MERNSTACK-] Finish [Intro to Storybook tutorial](https://storybook.js.org/tutorials/intro-to-storybook/) [Continue here](https://storybook.js.org/tutorials/intro-to-storybook/react/en/simple-component/) 
+- [ ] [MERNSTACK-] Read about [Mock Service Worker](https://storybook.js.org/addons/msw-storybook-addon/) integration into Storybook for handling mock data.
+- [ ] [MERNSTACK-] Select [integrations (addons)](https://storybook.js.org/integrations) for Storybook that are useful without losing productivity.
+- [ ] [MERNSTACK-] Set up [Dependabot](https://docs.github.com/en/code-security/getting-started/dependabot-quickstart-guide) in repository and write about it in the [documentation]((https://mern-stack-proj.vercel.app/).
+- [ ] [MERNSTACK-] Write a section about [Component-Driven Development](https://storybook.js.org/tutorials/intro-to-storybook/react/en/simple-component/) in [documentation]((https://mern-stack-proj.vercel.app/).
+- [ ] [MERNSTACK-] Destructure all component object type parameters to define all keys used in the component like the first parameter of this example: `function Task = ({ task: { id, title, state }, onArchiveTask, onPinTask }) => {}` 
+- [ ] [MERNSTACK-] Write a piece [Component Story Format 3]() in the Storybook section of the [documentation]((https://mern-stack-proj.vercel.app/).
+- [ ] [MERNSTACK-] Write about Component Driven Development in the [documentation]((https://mern-stack-proj.vercel.app/) [(Storybook source)] in a "Design practice" or "Strategies" kinda section.
+- [ ] [MERNSTACK-326] Add [Rocket Icon](https://fontawesome.com/icons/rocket?f=classic&s=solid) to documentation website title. 
+- [ ] [MERNSTACK-327] IMPORTANT: [Implement Formidable Inline Executable codeblocks](https://formidable.com/open-source/react-live/) examples in the documentation.
+- [ ] [MERNSTACK-] In the [Interactive demo](http://localhost:3000/interactive-demo) section, make as interactive as possible using components of the application.
+- [ ] [MERNSTACK-] Replace all codeblocks on documentation website with the codeblock like in /examples/codeblock.mdx
+- [ ] [MERNSTACK-] Redecorate all code blocks on the new documentation website.
+- [ ] [MERNSTACK-] Read [flexsearch documentation](https://github.com/nextapps-de/flexsearch), maybe this is a good search package. [See this list for more optional search packages](https://github.com/nextapps-de/flexsearch#performance-benchmark-ranking)
+- [ ] [MERNSTACK-] Build search component on the homepage in Storybook.
+- [ ] [MERNSTACK-] Learn about [JavaScript design patters](https://javascriptpatterns.vercel.app/patterns)
+- [ ] [MERNSTACK-] [Configuration of META data]() on Next.js documentation site.
+- [ ] [MERNSTACK-] See if [react-live](https://github.com/FormidableLabs/react-live) is compatible with Nextra. 
+- [ ] [MERNSTACK-] See if I can use [mermaid.js](https://mermaid.js.org/intro/) on Nextra. [docs](https://mermaid.js.org/intro/)
+- [ ] [MERNSTACK-] OPTONAL SEARCH ENGINE: [Algolia Docsearch](https://docsearch.algolia.com/)
+- [ ] [MERNSTACK-] Watch [freeCodeCamp TypeScript React Video tutorial](https://www.youtube.com/watch?v=FJDVKeh7RJI&ab_channel=freeCodeCamp.org) about how to use TypeScript in React.
+- [ ] [MERNSTACK-] [Watch this video](https://sci.rs/docs/built-in-components) if you want to get inspired by someone with a interesting view on how data and UI design are intertwined and designers need to realize that.
+- [ ] [MERNSTACK-] Make all buttons on the /quick-start page of documentation seem like a light turns on like the `Download` and `Get Git` button.
+- [ ] [MERNSTACK-] [Checkout this awesome-vite repository](https://github.com/vitejs/awesome-vite#templates) full of options to try out any project scaffolding you want.
+- [ ] [MERNSTACK-] Nextra uses [Prismjs](https://prismjs.com/) for code highlighting, Find out how to use it because highlighting can make an example much more understandable and the reader has his attention drawn to the important lines.
+- [ ] [MERNSTACK-] Capitalize all titles using [The Chicago Manual of Style](https://title.sh/). (First find out where titles are and change them all)
+- [ ] [MERNSTACK-] Use [Code Highlighting](https://sci.rs/features/mdx#code-highlighting) in the code examples in the documentation.
+- [ ] [MERNSTACK-] Write a piece about Storybook once you've worked with it enough to tell about it, and tell about the ES Lint rule that forbids to use [prop spreading](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-spreading.md). Tell about how much I agree with this rule, waiting for errors once you start changing around related components and am convinced that is this context I can not see any benefit on the long term. 
+- [ ] [MERNSTACK-] Transforming documentation website to "Thom Veldpaus" instead of "MERN_STACK_PROJ." primarily to blog about progress and document technology that excites me.
+- [ ] [MERNSTACK-] [Test this scaffolding repository for a potential upgrade!](https://github.com/The24thDS/vite-reactts18-chakra-jest-husky) Read into [Charkra UI](https://chakra-ui.com/getting-started) and find out if there are costs.
