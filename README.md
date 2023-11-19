@@ -1,1 +1,1 @@
-# MERN_STACK_PROJ. :rocket: documentation website
+This is a starter template for [Learn Next.js](https://nextjs.org/learn).
