@@ -33,5 +33,6 @@ module.exports = {
     'no-unused-vars': ['error', { varsIgnorePattern: '^React$' }],
     semi: ['error', 'never'],
     'space-before-function-paren': 'off',
+    indent: ['error', 2],
   },
 }

@@ -11,14 +11,15 @@ const theme = {
       <div>
         <div>
           <h1 className='websiteTitleHeader'>
-            🚀MERN_STACK_PROJ.<span style={{ opacity: 0.2 }}></span>
+            🚀MERN_STACK_PROJ.
+            <span style={{ opacity: 0.2 }} />
           </h1>
         </div>
         <div style={{ float: 'right' }}>by Thom Veldpaus</div>
       </div>
     </>
   ),
-  head: function Head(props) {
+  head: function Head() {
     return (
       <>
         {/* <meta charset="utf-8" /> */}
