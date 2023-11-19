@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRouter } from 'next/router'
-import Image from 'next/image'
+// import Image from 'next/image'
 
 const theme = {
   primaryHue: { dark: 262, light: 113 },
@@ -16,6 +16,13 @@ const theme = {
           </h1>
         </div>
         <div style={{ float: 'right' }}>by Thom Veldpaus</div>
+        {/* <Image
+          className='profilePicture'
+          alt='Thom Veldpaus'
+          width={60}
+          height={60}
+          src={'/ThomVeldpaus.jpg'}
+        /> */}
       </div>
     </>
   ),

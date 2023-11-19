@@ -34,5 +34,8 @@ module.exports = {
     semi: ['error', 'never'],
     'space-before-function-paren': 'off',
     indent: ['error', 2],
+    'quote-props': 'off',
+    'comma-dangle': ['error', 'always-multiline'],
+    'jsx-quotes': ['error', 'prefer-single'],
   },
 }

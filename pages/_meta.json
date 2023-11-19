@@ -1,7 +1,10 @@
 {
-  "index": {"title": "Introduction" },
+  "index": {
+    "title": "Introduction"
+  },
   "quick-start": "Quick Start",
   "interactive-demo": "Interactive Demo",
+  "project-issue-project": "Project Issue Progression",
   "advanced": "Advanced (A Folder)",
   "about": {
     "title": "About",
